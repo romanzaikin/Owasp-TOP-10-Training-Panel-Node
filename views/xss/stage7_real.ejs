@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<% include ../pages/header %>
+<body>	<!-- Fixed navbar -->
+<div class="navbar navbar-fixed-top navbar-inverse" style='margin-top:-2px;'>
+	<div class="navbar-inner">
+		<div class="container">
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li class='active'><a class="brand" href="../" ><i class='icon-book'></i>XSS Challenges</a></li>
+				</ul>
+				<ul class="nav pull-right">
+                    <li class='active' style='margin-top:2px;'><a href="#"><i class="icon-user"></i>&nbsp;Login </a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end of fixed Nav bar-->
+
+<div class="container">
+	<br>
+	<div class="row " >
+		<div class="span3"></div>
+		<div id="login" class="span6 well" style='background :white; border:1px silver solid;'>
+			<h4>Search for your favorite food:</h4>
+            <form action="" method="get">
+                <input type="text" class="input-block-level" placeholder="Apple" id="input" name="search">
+                <br>
+                <b>
+                    <span id='notification'>
+                   	<%- search %>
+                    </span>
+                </b>
+                <center><input type="submit" class="btn btn-primary" id="search" value = "&larr; Go &rarr;" style="margin-top:20px;"/></center>
+            </form>
+			<hr/>
+			<p><b>Rules: </b><kbd>create XSS POC, reopen the browser and make it works.</kbd></p>
+		</div>
+	</div>
+</div>
+<script>
+
+	//override alert
+	var _old_alert = window.alert;
+
+	window.alert = function() {
+		$("#notification").html("<a href='stage8.ejs'>Good job stage10 go go go!</a>");
+		_old_alert.apply(window, arguments);
+	};
+
+</script>
+</body>
+</html>

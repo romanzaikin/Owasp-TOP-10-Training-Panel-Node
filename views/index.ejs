@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AdminPanel - ITSafe</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css2/bootstrap.min.css" media="screen">
+  <script src="./assets/js2/jquery.min.js"></script>
+  <script src="./assets/js2/bootstrap.min.js"></script>
+  <style> body { background-color: #f5f5f5; } </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/#">Challenges OWASP System</a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>Remote Code Execution</b></div>
+        <div class="panel-body">
+          <div class="list-group">
+            <a href="/RCE/stage/1" class="list-group-item">RCE With Known Vulnerabilities ( 1)</a>
+            <a href="/RCE/stage/2" class="list-group-item">RCE ( 2)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>Local File Inclusion & Remote File Inclusion</b></div>
+        <div class="panel-body">
+          <div class="list-group">
+            <a href="/file_inclusion/stage/1?file=data.log" class="list-group-item">LFI STAGE 0x01 ( 1)</a>
+            <a href="/file_inclusion/stage/2?file=data.log" class="list-group-item">SSRF STAGE 0x02 ( 2)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>Cross Site Scripting</b></div>
+        <div class="panel-body">
+          <div class="list-group">
+            <a href="/XSS/stage/1" class="list-group-item">XSS STAGE 0x01 ( 1)</a>
+            <a href="/XSS/stage/2" class="list-group-item">XSS STAGE 0x02 ( 2)</a>
+            <a href="/XSS/stage/3" class="list-group-item">XSS STAGE 0x03 ( 3)</a>
+            <a href="/XSS/stage/4" class="list-group-item">XSS STAGE 0x04 ( 4)</a>
+            <a href="/XSS/stage/5" class="list-group-item">XSS STAGE 0x05 ( 5)</a>
+            <a href="/XSS/stage/6" class="list-group-item">XSS STAGE 0x06 ( 6)</a>
+            <a href="/XSS/stage/7" class="list-group-item">XSS STAGE 0x07 ( 7)</a>
+            <a href="/XSS/stage/8" class="list-group-item">XSS STAGE 0x08 ( 8)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>XML External Entity</b></div>
+        <div class="panel-body">
+          <div class="list-group">
+            <a href="/XXE/stage/1" class="list-group-item">XXE STAGE 0x01 ( 1)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>SQL Injection</b></div>
+        <div class="panel-body">
+          <div class="list-group">
+            <a href="/nosqli/stage/1" class="list-group-item">NOSQLi Register Page</a>
+            <a href="/nosqli/stage/2" class="list-group-item">NOSQLi STAGE 0x01 ( 1)</a>
+            <a href="/nosqli/stage/3" class="list-group-item">NOSQLi STAGE 0x02 ( 2)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
